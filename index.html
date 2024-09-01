@@ -1,17 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <!-- Use CDN for Plotly -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Plot</title>
+    <!-- Use the CDN for Plotly -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <!-- Your Plotly code goes here -->
-    <div id="plotly-div"></div>
+    <div id="plotly-div" style="width: 100%; height: 100%;"></div>
+
     <script type="text/javascript">
-        var data = [{/* Your plotly data */}];
-        var layout = {/* Your plotly layout */};
+        // Define your Plotly data and layout here
+        var data = [{
+            x: [1, 2, 3, 4],
+            y: [10, 15, 13, 17],
+            type: 'scatter'
+        }];
+
+        var layout = {
+            title: 'My Interactive Plot'
+        };
+
+        // Render the plot to the div with id 'plotly-div'
         Plotly.newPlot('plotly-div', data, layout);
     </script>
 </body>
 </html>
-
